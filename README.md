@@ -19,7 +19,7 @@ This project shows you how to build your own automatically generated playlists b
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Spotify-Billboard-Playlist.git
+git clone https://github.com/achintya-goyal/Spotify-Billboard-Playlist.git
 cd Spotify-Billboard-Playlist
 ```
 
