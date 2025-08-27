@@ -7,11 +7,11 @@ sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
         scope = "playlist-modify-private",
         redirect_uri = "https://www.google.com/",
-        client_id = "0ea5e18fa5a54481a6de7adc838aedeb",
-        client_secret="8664dc79890b4403903ce554b1cf2307",
+        client_id = "your id",
+        client_secret="your id",
         show_dialog=True,
         cache_path="token.txt",
-        username= "Asap?"
+        username= "your id?"
     )
 )
 
@@ -21,7 +21,7 @@ year = input("Enter year you want the songs of: ")
 
 url = "https://popnable.com/india/charts/top-40/year-" + year
 
-header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"}
+header = {"your info here :) again"}
 response = requests.get(url = url, headers = header)
 
 soup = BeautifulSoup(response.text, "html.parser")
@@ -42,4 +42,5 @@ for song in song_name_lst:
         print("song doesn't exist. skipped:",song)
 
 playlist = sp.user_playlist_create(user=user_id, name=f"{year} Billboard Indian", public=False)
+
 sp.playlist_add_items(playlist_id=playlist["id"], items=song_urls)
